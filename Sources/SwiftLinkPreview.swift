@@ -550,13 +550,6 @@ extension SwiftLinkPreview {
         var result = result
         let description = result.description
 
-        if description == nil || description?.isEmpty ?? true {
-            let value: String = self.crawlCode(htmlCode, minimum: SwiftLinkPreview.decriptionMinimumRelevant)
-            if !value.isEmpty {
-                result.description = value.decoded.extendedTrim
-            }
-        }
-
         return (htmlCode, result)
     }
 
