@@ -36,11 +36,15 @@ public class AlamofireSource: NSObject, InputSource {
                               placeholderImage: nil,
                               filter: nil,
                               progress: nil) { (response) in
-
-            imageView.image = response.result.value
-
-            if let value = response.result.value { callback(value) }
-
+            
+            switch response.result {
+            case .success(let image):
+                imageView.image = image
+                callback(image)
+                break
+            default:
+                break
+            }
         }
     }
 
