@@ -10,7 +10,7 @@ import Foundation
 // MARK: - Regular expressions
 class Regex {
 
-    static let imagePattern = "(.+?)\\.(gif|jpg|jpeg|png|bmp)$"
+    static let imagePattern = "(.+?)\\.(gif|jpg|jpeg|png|bmp)"
     static let videoTagPattern = "<video[^>]+src=\"([^\"]+)"
     static let imageTagPattern = "<img(.+?)src=\"([^\"](.+?))\"(.+?)[/]?>"
     static let titlePattern = "<title(.*?)>(.*?)</title>"
